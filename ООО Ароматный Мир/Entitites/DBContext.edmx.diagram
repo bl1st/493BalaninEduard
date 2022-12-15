@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5214dec317634599a13583679cd78e33" Name="Diagram1">
+        <EntityTypeShape EntityType="DBPorfumeModel.Category" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBPorfumeModel.Manufacturer" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBPorfumeModel.MeasurementUnit" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBPorfumeModel.Product" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBPorfumeModel.Role" Width="1.5" PointX="5.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBPorfumeModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBPorfumeModel.User" Width="1.5" PointX="8" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBPorfumeModel.Vendor" Width="1.5" PointX="0.75" PointY="10.125" IsExpanded="true" />
+        <AssociationConnector Association="DBPorfumeModel.FK__Product__Categor__35BCFE0A" ManuallyRouted="false" />
+        <AssociationConnector Association="DBPorfumeModel.FK__Product__Manufac__36B12243" ManuallyRouted="false" />
+        <AssociationConnector Association="DBPorfumeModel.FK__Product__Measure__34C8D9D1" ManuallyRouted="false" />
+        <AssociationConnector Association="DBPorfumeModel.FK__Product__VendorI__37A5467C" ManuallyRouted="false" />
+        <AssociationConnector Association="DBPorfumeModel.FK__User__RoleID__276EDEB3" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

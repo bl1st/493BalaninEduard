@@ -1,0 +1,19 @@
+C:\Users\Eduard\Desktop\ООО Ароматный мир\ООО Ароматный Мир\bin\Debug\ООО Ароматный Мир.exe.config
+C:\Users\Eduard\Desktop\ООО Ароматный мир\ООО Ароматный Мир\bin\Debug\ООО Ароматный Мир.exe
+C:\Users\Eduard\Desktop\ООО Ароматный мир\ООО Ароматный Мир\bin\Debug\ООО Ароматный Мир.pdb
+C:\Users\Eduard\Desktop\ООО Ароматный мир\ООО Ароматный Мир\bin\Debug\EntityFramework.dll
+C:\Users\Eduard\Desktop\ООО Ароматный мир\ООО Ароматный Мир\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Eduard\Desktop\ООО Ароматный мир\ООО Ароматный Мир\bin\Debug\EntityFramework.xml
+C:\Users\Eduard\Desktop\ООО Ароматный мир\ООО Ароматный Мир\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Eduard\Desktop\ООО Ароматный мир\ООО Ароматный Мир\obj\Debug\ООО Ароматный Мир.csproj.AssemblyReference.cache
+C:\Users\Eduard\Desktop\ООО Ароматный мир\ООО Ароматный Мир\obj\Debug\ООО Ароматный Мир.csproj.SuggestedBindingRedirects.cache
+C:\Users\Eduard\Desktop\ООО Ароматный мир\ООО Ароматный Мир\obj\Debug\ООО_Ароматный_Мир.Properties.Resources.resources
+C:\Users\Eduard\Desktop\ООО Ароматный мир\ООО Ароматный Мир\obj\Debug\ООО_Ароматный_Мир.FormAuthorize.resources
+C:\Users\Eduard\Desktop\ООО Ароматный мир\ООО Ароматный Мир\obj\Debug\ООО_Ароматный_Мир.Views.FormProducts.resources
+C:\Users\Eduard\Desktop\ООО Ароматный мир\ООО Ароматный Мир\obj\Debug\ООО Ароматный Мир.csproj.GenerateResource.cache
+C:\Users\Eduard\Desktop\ООО Ароматный мир\ООО Ароматный Мир\obj\Debug\ООО Ароматный Мир.csproj.CoreCompileInputs.cache
+C:\Users\Eduard\Desktop\ООО Ароматный мир\ООО Ароматный Мир\obj\Debug\ООО Ароматный Мир.csproj.CopyComplete
+C:\Users\Eduard\Desktop\ООО Ароматный мир\ООО Ароматный Мир\obj\Debug\ООО Ароматный Мир.exe
+C:\Users\Eduard\Desktop\ООО Ароматный мир\ООО Ароматный Мир\obj\Debug\ООО Ароматный Мир.pdb
+C:\Users\Eduard\Desktop\ООО Ароматный мир\ООО Ароматный Мир\obj\Debug\ООО_Ароматный_Мир.Views.FormProductInfo.resources
+C:\Users\Eduard\Desktop\ООО Ароматный мир\ООО Ароматный Мир\obj\Debug\ООО_Ароматный_Мир.Views.FormEditProduct.resources

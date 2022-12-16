@@ -121,6 +121,7 @@
 			this.tlpBody.Controls.Add(this.btnLogin, 1, 3);
 			this.tlpBody.Controls.Add(this.btnLoginAsGuest, 2, 3);
 			this.tlpBody.Location = new System.Drawing.Point(0, 88);
+			this.tlpBody.MinimumSize = new System.Drawing.Size(766, 369);
 			this.tlpBody.Name = "tlpBody";
 			this.tlpBody.RowCount = 5;
 			this.tlpBody.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 43.47826F));

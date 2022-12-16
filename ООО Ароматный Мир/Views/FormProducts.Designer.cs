@@ -224,7 +224,7 @@
 			// 
 			this.cbCategories.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
 			this.cbCategories.FormattingEnabled = true;
-			this.cbCategories.Location = new System.Drawing.Point(833, 9);
+			this.cbCategories.Location = new System.Drawing.Point(833, 10);
 			this.cbCategories.Name = "cbCategories";
 			this.cbCategories.Size = new System.Drawing.Size(240, 23);
 			this.cbCategories.TabIndex = 7;
@@ -248,7 +248,7 @@
 			// 
 			this.cbDiscountAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
 			this.cbDiscountAmount.FormattingEnabled = true;
-			this.cbDiscountAmount.Location = new System.Drawing.Point(504, 9);
+			this.cbDiscountAmount.Location = new System.Drawing.Point(504, 10);
 			this.cbDiscountAmount.Name = "cbDiscountAmount";
 			this.cbDiscountAmount.Size = new System.Drawing.Size(239, 23);
 			this.cbDiscountAmount.TabIndex = 5;
@@ -287,7 +287,7 @@
 			// 
 			this.cbSortCost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
 			this.cbSortCost.FormattingEnabled = true;
-			this.cbSortCost.Location = new System.Drawing.Point(148, 10);
+			this.cbSortCost.Location = new System.Drawing.Point(148, 9);
 			this.cbSortCost.Name = "cbSortCost";
 			this.cbSortCost.Size = new System.Drawing.Size(239, 23);
 			this.cbSortCost.TabIndex = 3;
@@ -326,6 +326,7 @@
 			this.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+			this.MinimumSize = new System.Drawing.Size(1092, 602);
 			this.Name = "FormProducts";
 			this.Text = "ООО Ароматный мир";
 			this.Load += new System.EventHandler(this.FormProducts_Load);

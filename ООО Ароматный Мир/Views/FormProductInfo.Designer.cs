@@ -350,6 +350,9 @@
 			// 
 			// tableLayoutPanel1
 			// 
+			this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.tableLayoutPanel1.ColumnCount = 4;
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -379,6 +382,7 @@
 			this.tableLayoutPanel1.Controls.Add(this.labelQuantity, 0, 8);
 			this.tableLayoutPanel1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.tableLayoutPanel1.Location = new System.Drawing.Point(4, 90);
+			this.tableLayoutPanel1.MinimumSize = new System.Drawing.Size(767, 381);
 			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
 			this.tableLayoutPanel1.RowCount = 9;
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
@@ -453,6 +457,7 @@
 			this.Controls.Add(this.tableLayoutPanel1);
 			this.Controls.Add(this.tlpHeader);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+			this.MinimumSize = new System.Drawing.Size(791, 522);
 			this.Name = "FormProductInfo";
 			this.Text = "ООО \"Ароматный мир\"";
 			this.Load += new System.EventHandler(this.FormProductInfo_Load);

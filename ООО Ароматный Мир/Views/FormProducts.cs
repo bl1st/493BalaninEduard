@@ -15,14 +15,28 @@ namespace ООО_Ароматный_Мир.Views
 {
 	public partial class FormProducts : Form
 	{
+		ContextMenuStrip ctx;
 		private string _roleName;
 		private string _userName;
+		Product clickedProduct;
 		public FormProducts(string roleName, string userName)
 		{
+			ctx = new ContextMenuStrip();
+			ctx.Items.Add("Добавить в заказ");
+			ctx.ItemClicked += ctx_ItemClicked;
 			this._roleName = roleName;
 			this._userName = userName;
 			InitializeComponent();
 			_userName = userName;
+		}
+
+		private void ctx_ItemClicked(Object sender, EventArgs e)
+		{
+			btnShowOrder.Visible = true;
+			btnShowOrder.Enabled = true;
+			ClientProduct cp = new ClientProduct(clickedProduct.Article,1);
+			ClientOrder.AddProduct(cp);
+			
 		}
 
 		private void FormProducts_Load(object sender, EventArgs e)
@@ -31,6 +45,16 @@ namespace ООО_Ароматный_Мир.Views
 			{
 				btnAddProduct.Enabled = true;
 				btnAddProduct.Visible = true;
+			}
+			if (ClientOrder.products.Count > 0)
+			{
+				btnShowOrder.Visible = true;
+				btnShowOrder.Enabled = true;
+			}
+			else
+			{
+				btnShowOrder.Visible = false;
+				btnShowOrder.Enabled = false;
 			}
 
 			cbSortCost.Items.Add("По возрастанию");
@@ -147,6 +171,7 @@ namespace ООО_Ароматный_Мир.Views
 				panelProducts.Controls.Add(pp);
 				pp.Tag = product;
 				pp.DoubleClick += Pp_DoubleClick;
+				pp.MouseClick += Pp_Click;
 
 				pos += pp.Height;
 			
@@ -154,8 +179,17 @@ namespace ООО_Ароматный_Мир.Views
 			}
 			panelProducts.AutoScroll = true;
 		}
-
-		private void Pp_DoubleClick(object sender, EventArgs e)
+		private void Pp_Click(object sender, MouseEventArgs e)
+		{
+			if (e.Button == MouseButtons.Right)
+			{
+				clickedProduct = (Product)(sender as ProductPanel).Tag;
+				ctx.Show(Cursor.Position);
+			}
+			
+		
+		}
+			private void Pp_DoubleClick(object sender, EventArgs e)
 		{
 			Product p = (Product)(sender as ProductPanel).Tag;
 			if (_roleName != "Администратор")
@@ -185,6 +219,14 @@ namespace ООО_Ароматный_Мир.Views
 			forminfo.ShowDialog();
 			this.Show();
 			GetProducts();
+		}
+
+		private void btnShowOrder_Click(object sender, EventArgs e)
+		{
+			FormOrderInfo form = new FormOrderInfo(_userName);
+			this.Hide();
+			form.ShowDialog();
+			this.Show();
 		}
 	}
 }

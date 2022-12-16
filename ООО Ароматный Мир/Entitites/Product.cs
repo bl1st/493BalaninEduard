@@ -14,6 +14,12 @@ namespace ООО_Ароматный_Мир.Entitites
     
     public partial class Product
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Product()
+        {
+            this.OrderContent = new HashSet<OrderContent>();
+        }
+    
         public string Article { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
@@ -31,5 +37,7 @@ namespace ООО_Ароматный_Мир.Entitites
         public virtual Manufacturer Manufacturer { get; set; }
         public virtual MeasurementUnit MeasurementUnit { get; set; }
         public virtual Vendor Vendor { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<OrderContent> OrderContent { get; set; }
     }
 }

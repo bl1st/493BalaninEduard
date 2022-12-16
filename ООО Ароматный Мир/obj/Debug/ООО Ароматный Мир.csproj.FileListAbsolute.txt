@@ -17,3 +17,4 @@ C:\Users\Eduard\Desktop\ООО Ароматный мир\ООО Ароматны
 C:\Users\Eduard\Desktop\ООО Ароматный мир\ООО Ароматный Мир\obj\Debug\ООО Ароматный Мир.pdb
 C:\Users\Eduard\Desktop\ООО Ароматный мир\ООО Ароматный Мир\obj\Debug\ООО_Ароматный_Мир.Views.FormProductInfo.resources
 C:\Users\Eduard\Desktop\ООО Ароматный мир\ООО Ароматный Мир\obj\Debug\ООО_Ароматный_Мир.Views.FormEditProduct.resources
+C:\Users\Eduard\Desktop\ООО Ароматный мир\ООО Ароматный Мир\obj\Debug\ООО_Ароматный_Мир.Views.FormOrderInfo.resources

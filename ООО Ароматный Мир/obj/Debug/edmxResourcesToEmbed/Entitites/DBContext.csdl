@@ -44,6 +44,7 @@
     <NavigationProperty Name="Manufacturer" Relationship="Self.FK__Product__Manufac__36B12243" FromRole="Product" ToRole="Manufacturer" />
     <NavigationProperty Name="MeasurementUnit" Relationship="Self.FK__Product__Measure__34C8D9D1" FromRole="Product" ToRole="MeasurementUnit" />
     <NavigationProperty Name="Vendor" Relationship="Self.FK__Product__VendorI__37A5467C" FromRole="Product" ToRole="Vendor" />
+    <NavigationProperty Name="OrderContent" Relationship="DBPorfumeModel.FK__OrderCont__Produ__534D60F1" FromRole="Product" ToRole="OrderContent" />
   </EntityType>
   <EntityType Name="Role">
     <Key>
@@ -173,5 +174,115 @@
       <End Role="Role" EntitySet="Role" />
       <End Role="User" EntitySet="User" />
     </AssociationSet>
+    <EntitySet Name="Order" EntityType="DBPorfumeModel.Order" />
+    <EntitySet Name="OrderContent" EntityType="DBPorfumeModel.OrderContent" />
+    <EntitySet Name="OrderStatus" EntityType="DBPorfumeModel.OrderStatus" />
+    <EntitySet Name="Outpost" EntityType="DBPorfumeModel.Outpost" />
+    <AssociationSet Name="FK__Order__OutpostID__4F7CD00D" Association="DBPorfumeModel.FK__Order__OutpostID__4F7CD00D">
+      <End Role="Outpost" EntitySet="Outpost" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Order__StatusID__5070F446" Association="DBPorfumeModel.FK__Order__StatusID__5070F446">
+      <End Role="OrderStatus" EntitySet="OrderStatus" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrderCont__Order__5441852A" Association="DBPorfumeModel.FK__OrderCont__Order__5441852A">
+      <End Role="Order" EntitySet="Order" />
+      <End Role="OrderContent" EntitySet="OrderContent" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrderCont__Produ__534D60F1" Association="DBPorfumeModel.FK__OrderCont__Produ__534D60F1">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="OrderContent" EntitySet="OrderContent" />
+    </AssociationSet>
   </EntityContainer>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DeliveryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="OutpostID" Type="Int32" Nullable="false" />
+    <Property Name="ClientFullName" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="RecieveCode" Type="Int32" Nullable="false" />
+    <Property Name="StatusID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Outpost" Relationship="DBPorfumeModel.FK__Order__OutpostID__4F7CD00D" FromRole="Order" ToRole="Outpost" />
+    <NavigationProperty Name="OrderStatus" Relationship="DBPorfumeModel.FK__Order__StatusID__5070F446" FromRole="Order" ToRole="OrderStatus" />
+    <NavigationProperty Name="OrderContent" Relationship="DBPorfumeModel.FK__OrderCont__Order__5441852A" FromRole="Order" ToRole="OrderContent" />
+  </EntityType>
+  <EntityType Name="OrderContent">
+    <Key>
+      <PropertyRef Name="ProductArticle" />
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="ProductArticle" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="OrderID" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Order" Relationship="DBPorfumeModel.FK__OrderCont__Order__5441852A" FromRole="OrderContent" ToRole="Order" />
+    <NavigationProperty Name="Product" Relationship="DBPorfumeModel.FK__OrderCont__Produ__534D60F1" FromRole="OrderContent" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="OrderStatus">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Order" Relationship="DBPorfumeModel.FK__Order__StatusID__5070F446" FromRole="OrderStatus" ToRole="Order" />
+  </EntityType>
+  <EntityType Name="Outpost">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Address" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Order" Relationship="DBPorfumeModel.FK__Order__OutpostID__4F7CD00D" FromRole="Outpost" ToRole="Order" />
+  </EntityType>
+  <Association Name="FK__Order__OutpostID__4F7CD00D">
+    <End Type="DBPorfumeModel.Outpost" Role="Outpost" Multiplicity="1" />
+    <End Type="DBPorfumeModel.Order" Role="Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Outpost">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="OutpostID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Order__StatusID__5070F446">
+    <End Type="DBPorfumeModel.OrderStatus" Role="OrderStatus" Multiplicity="1" />
+    <End Type="DBPorfumeModel.Order" Role="Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrderStatus">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="StatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrderCont__Order__5441852A">
+    <End Type="DBPorfumeModel.Order" Role="Order" Multiplicity="1" />
+    <End Type="DBPorfumeModel.OrderContent" Role="OrderContent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OrderContent">
+        <PropertyRef Name="OrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrderCont__Produ__534D60F1">
+    <End Type="DBPorfumeModel.Product" Role="Product" Multiplicity="1" />
+    <End Type="DBPorfumeModel.OrderContent" Role="OrderContent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Article" />
+      </Principal>
+      <Dependent Role="OrderContent">
+        <PropertyRef Name="ProductArticle" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

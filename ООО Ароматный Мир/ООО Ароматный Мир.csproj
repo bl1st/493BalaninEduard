@@ -58,6 +58,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\ClientOrder.cs" />
+    <Compile Include="Classes\ClientProduct.cs" />
     <Compile Include="Classes\Helper.cs" />
     <Compile Include="CustomElements\ProductPanel.cs">
       <SubType>Component</SubType>
@@ -84,6 +86,18 @@
       <DependentUpon>DBContext.tt</DependentUpon>
     </Compile>
     <Compile Include="Entitites\MeasurementUnit.cs">
+      <DependentUpon>DBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entitites\Order.cs">
+      <DependentUpon>DBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entitites\OrderContent.cs">
+      <DependentUpon>DBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entitites\OrderStatus.cs">
+      <DependentUpon>DBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entitites\Outpost.cs">
       <DependentUpon>DBContext.tt</DependentUpon>
     </Compile>
     <Compile Include="Entitites\Product.cs">
@@ -115,6 +129,12 @@
     <Compile Include="Views\FormEditProduct.Designer.cs">
       <DependentUpon>FormEditProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\FormOrderInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormOrderInfo.Designer.cs">
+      <DependentUpon>FormOrderInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\FormProductInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FormEditProduct.resx">
       <DependentUpon>FormEditProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormOrderInfo.resx">
+      <DependentUpon>FormOrderInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FormProductInfo.resx">
       <DependentUpon>FormProductInfo.cs</DependentUpon>

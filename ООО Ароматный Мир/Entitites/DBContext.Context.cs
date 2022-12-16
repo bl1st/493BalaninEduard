@@ -33,5 +33,9 @@ namespace ООО_Ароматный_Мир.Entitites
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<User> User { get; set; }
         public virtual DbSet<Vendor> Vendor { get; set; }
+        public virtual DbSet<Order> Order { get; set; }
+        public virtual DbSet<OrderContent> OrderContent { get; set; }
+        public virtual DbSet<OrderStatus> OrderStatus { get; set; }
+        public virtual DbSet<Outpost> Outpost { get; set; }
     }
 }

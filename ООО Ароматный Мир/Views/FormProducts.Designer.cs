@@ -174,6 +174,7 @@
 			this.btnShowOrder.TabIndex = 1;
 			this.btnShowOrder.Text = "Просмотреть заказ";
 			this.btnShowOrder.UseVisualStyleBackColor = false;
+			this.btnShowOrder.Click += new System.EventHandler(this.btnShowOrder_Click);
 			// 
 			// tableLayoutPanel2
 			// 

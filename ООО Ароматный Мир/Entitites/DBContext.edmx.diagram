@@ -18,6 +18,14 @@
         <AssociationConnector Association="DBPorfumeModel.FK__Product__Measure__34C8D9D1" ManuallyRouted="false" />
         <AssociationConnector Association="DBPorfumeModel.FK__Product__VendorI__37A5467C" ManuallyRouted="false" />
         <AssociationConnector Association="DBPorfumeModel.FK__User__RoleID__276EDEB3" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DBPorfumeModel.Order" Width="1.5" PointX="5.625" PointY="8" />
+        <EntityTypeShape EntityType="DBPorfumeModel.OrderContent" Width="1.5" PointX="8.875" PointY="5" />
+        <EntityTypeShape EntityType="DBPorfumeModel.OrderStatus" Width="1.5" PointX="3.375" PointY="11.625" />
+        <EntityTypeShape EntityType="DBPorfumeModel.Outpost" Width="1.5" PointX="3.375" PointY="8.625" />
+        <AssociationConnector Association="DBPorfumeModel.FK__Order__OutpostID__4F7CD00D" />
+        <AssociationConnector Association="DBPorfumeModel.FK__Order__StatusID__5070F446" />
+        <AssociationConnector Association="DBPorfumeModel.FK__OrderCont__Order__5441852A" />
+        <AssociationConnector Association="DBPorfumeModel.FK__OrderCont__Produ__534D60F1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
